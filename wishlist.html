@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YatraX | My Wishlist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="wishlist.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">Yatra<span>X</span></a>
+    <div class="header-nav">
+        <a href="wishlist.html" class="nav-link">
+            <span class="heart-emoji">❤️</span>
+            <span id="wishlistBadge" class="wishlist-badge">0</span>
+        </a>
+        <div id="authArea" class="auth-area"></div>
+    </div>
+</header>
+
+<section class="wishlist-hero">
+    <div class="wishlist-hero-content">
+        <div class="small-title">Saved for later</div>
+        <h1>My Wishlist</h1>
+        <p>Your handpicked destinations, ready when you are.</p>
+    </div>
+</section>
+
+<main class="wishlist-container">
+    <div class="wishlist-grid" id="wishlistGrid">
+        <div class="loading-msg">Loading wishlist...</div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-logo">Yatra<span>X</span></div>
+    Explore more. Travel better.
+</footer>
+
+<script src="common.js"></script>
+<script src="wishlist.js"></script>
+</body>
+</html>

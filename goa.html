@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YatraX | Goa</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="goa.css">
+<link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+
+<button class="map-btn" onclick="openMap()">MAP</button>
+
+<header>
+    <div class="header-left">
+        <button class="header-back" onclick="goBack()">← Back</button>
+        <a href="index.html" class="logo">Yatra<span>X</span></a>
+    </div>
+    <div class="header-nav">
+        <a href="wishlist.html" class="nav-link">
+            <span class="heart-emoji">❤️</span>
+            <span id="wishlistBadge" class="wishlist-badge">0</span>
+        </a>
+        <div id="authArea" class="auth-area"></div>
+    </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Goa</h1>
+    <p>Sun, beaches, nightlife and Portuguese heritage. Explore the best places in Goa with YatraX.</p>
+  </div>
+</section>
+
+<main class="container">
+
+<section class="section">
+  <div class="heading">
+    <h2>Popular Locations</h2>
+    <p>Click a location to open its own page with reviews.</p>
+  </div>
+  <div class="locations">
+    <div class="card" onclick="window.location.href='location.html?dest=goa&loc=baga-beach'">
+      <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=90">
+      <div class="card-info"><h3>Baga Beach</h3><p>Beach • Water Sports • Nightlife</p></div>
+    </div>
+    <div class="card" onclick="window.location.href='location.html?dest=goa&loc=calangute-beach'">
+      <img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=90">
+      <div class="card-info"><h3>Calangute Beach</h3><p>Beach • Shopping • Activities</p></div>
+    </div>
+    <div class="card" onclick="window.location.href='location.html?dest=goa&loc=anjuna-beach'">
+      <img src="https://images.unsplash.com/photo-1587922546307-776227941871?auto=format&fit=crop&w=1200&q=90">
+      <div class="card-info"><h3>Anjuna Beach</h3><p>Beach • Market • Cafés</p></div>
+    </div>
+    <div class="card" onclick="window.location.href='location.html?dest=goa&loc=fort-aguada'">
+      <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=1200&q=90">
+      <div class="card-info"><h3>Fort Aguada</h3><p>Heritage • Architecture • Sea View</p></div>
+    </div>
+    <div class="card" onclick="window.location.href='location.html?dest=goa&loc=dudhsagar-falls'">
+      <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1200&q=90">
+      <div class="card-info"><h3>Dudhsagar Falls</h3><p>Waterfall • Nature • Adventure</p></div>
+    </div>
+    <div class="card" onclick="window.location.href='location.html?dest=goa&loc=palolem-beach'">
+      <img src="https://images.unsplash.com/photo-1515307638821-8c2ece10bf6a?auto=format&fit=crop&w=1200&q=90">
+      <div class="card-info"><h3>Palolem Beach</h3><p>Beach • Relaxation • Sunset</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="map-section" id="mapSection">
+  <div class="map-box">
+    <div class="map-header">
+      <div>
+        <h2>Goa Map</h2>
+        <p>Explore Goa locations even in low-connectivity areas.</p>
+      </div>
+      <div class="map-buttons">
+        <button class="map-toggle active" id="onlineBtn" onclick="showOnline()">Online</button>
+        <button class="map-toggle" id="offlineBtn" onclick="showOffline()">Offline</button>
+        <button class="close-map" onclick="closeMap()">×</button>
+      </div>
+    </div>
+    <div id="mapStatus" class="map-status">Online mode • Live map available</div>
+    <div class="map-frame">
+      <iframe id="onlineMap" src="https://www.google.com/maps?q=Goa,India&output=embed" loading="lazy" allowfullscreen></iframe>
+      <div id="offlineMap" class="offline-map">
+        <svg viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet" class="offline-svg" xmlns="http://www.w3.org/2000/svg">
+          <rect width="1000" height="600" fill="#f2e8d0"/>
+          <path d="M 0,0 L 220,0 Q 200,60 230,120 Q 250,180 240,240 Q 230,300 250,360 Q 280,420 320,480 Q 360,540 400,600 L 0,600 Z" fill="#c8dce8" stroke="#3a2f22" stroke-width="2.2"/>
+          <text x="100" y="300" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="bold" font-style="italic" fill="#2a5578" transform="rotate(-70 100 300)">ARABIAN SEA</text>
+          <path d="M 220,0 Q 200,60 230,120 Q 250,180 240,240 Q 230,300 250,360 Q 280,420 320,480 Q 360,540 400,600 L 1000,600 L 1000,0 Z" fill="#e8dcc0" stroke="#3a2f22" stroke-width="2.2"/>
+          <path d="M 850,60 L 880,30 L 910,60 L 940,25 L 970,60 L 850,180 L 880,150 L 910,180 L 940,145 L 970,180 L 850,300 L 880,270 L 910,300 L 940,265 L 970,300 L 850,420 L 880,390 L 910,420 L 940,385 L 970,420 L 850,540 L 880,510 L 910,540 L 940,505 L 970,540" fill="none" stroke="#3a2f22" stroke-width="1.8" stroke-linecap="round"/>
+          <text x="910" y="560" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="bold" fill="#5a4838" letter-spacing="2">WESTERN GHATS</text>
+          <path d="M 760,300 Q 650,310 550,315 Q 450,320 380,320 Q 320,322 260,325 Q 240,326 230,325" fill="none" stroke="#4a7ba8" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
+          <text x="560" y="290" font-family="Georgia,serif" font-size="11" font-style="italic" fill="#2a5578">Mandovi River</text>
+          <path d="M 760,440 Q 680,430 580,425 Q 480,422 380,425 Q 320,428 280,435 Q 260,440 250,440" fill="none" stroke="#4a7ba8" stroke-width="4.5" stroke-linecap="round" opacity="0.85"/>
+          <text x="560" y="418" font-family="Georgia,serif" font-size="11" font-style="italic" fill="#2a5578">Zuari River</text>
+          <path d="M 650,545 Q 560,540 490,538 Q 440,536 430,538" fill="none" stroke="#4a7ba8" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+          <text x="530" y="528" font-family="Georgia,serif" font-size="10" font-style="italic" fill="#2a5578">Sal River</text>
+          <g fill="none" stroke="#7a5230" stroke-width="2.4" stroke-dasharray="9 7" stroke-linecap="round" opacity="0.9">
+            <path d="M 290,60 Q 305,180 300,240 Q 290,300 300,360 Q 330,430 400,510 Q 425,545 440,595"/>
+            <path d="M 400,390 Q 550,400 680,405 Q 740,408 770,410"/>
+            <path d="M 400,390 Q 445,383 490,375"/>
+            <path d="M 300,170 Q 340,270 400,390"/>
+          </g>
+          <circle cx="290" cy="110" r="8" fill="#c8541e" stroke="#3a2f22" stroke-width="2"/>
+          <text x="312" y="108" font-family="Georgia,serif" font-size="14" font-weight="bold" fill="#2a1a10">Chapora</text>
+          <circle cx="300" cy="170" r="8" fill="#c8541e" stroke="#3a2f22" stroke-width="2"/>
+          <text x="322" y="168" font-family="Georgia,serif" font-size="14" font-weight="bold" fill="#2a1a10">Anjuna</text>
+          <circle cx="300" cy="220" r="9" fill="#c8541e" stroke="#3a2f22" stroke-width="2"/>
+          <text x="322" y="218" font-family="Georgia,serif" font-size="15" font-weight="bold" fill="#2a1a10">Baga Beach</text>
+          <circle cx="295" cy="270" r="8" fill="#c8541e" stroke="#3a2f22" stroke-width="2"/>
+          <text x="317" y="268" font-family="Georgia,serif" font-size="14" font-weight="bold" fill="#2a1a10">Calangute</text>
+          <circle cx="300" cy="340" r="9" fill="#c8541e" stroke="#3a2f22" stroke-width="2"/>
+          <text x="322" y="338" font-family="Georgia,serif" font-size="15" font-weight="bold" fill="#2a1a10">Fort Aguada</text>
+          <circle cx="400" cy="390" r="10" fill="#c8541e" stroke="#3a2f22" stroke-width="2"/>
+          <text x="400" y="370" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="bold" fill="#2a1a10">Panaji</text>
+          <circle cx="490" cy="375" r="7" fill="#7a3a1e" stroke="#3a2f22" stroke-width="2"/>
+          <text x="510" y="378" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#2a1a10">Old Goa</text>
+          <circle cx="770" cy="410" r="9" fill="#c8541e" stroke="#3a2f22" stroke-width="2"/>
+          <text x="770" y="390" text-anchor="middle" font-family="Georgia,serif" font-size="14" font-weight="bold" fill="#2a1a10">Dudhsagar Falls</text>
+          <circle cx="400" cy="510" r="9" fill="#c8541e" stroke="#3a2f22" stroke-width="2"/>
+          <text x="422" y="508" font-family="Georgia,serif" font-size="15" font-weight="bold" fill="#2a1a10">Palolem</text>
+          <g transform="translate(920,85)"><circle r="30" fill="#f2e8d0" stroke="#3a2f22" stroke-width="1.8"/><path d="M 0,-20 L 5,0 L 0,20 L -5,0 Z" fill="#c8541e" stroke="#3a2f22" stroke-width="1"/><text y="-46" text-anchor="middle" font-family="Georgia,serif" font-size="14" font-weight="bold" fill="#3a2f22">N</text></g>
+          <text x="40" y="592" font-family="Georgia,serif" font-size="11" font-style="italic" fill="#6a5a48">Goa Coast • Hand-drawn offline map • Not to scale</text>
+          <text x="970" y="592" text-anchor="end" font-family="Georgia,serif" font-size="11" font-style="italic" fill="#6a5a48">YatraX</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="budget">
+  <h2>Goa Budget Planner</h2>
+  <p>Choose your departure city and number of travellers to estimate your trip cost.</p>
+  <div class="budget-inputs">
+    <div class="input-box">
+      <label>Departing From</label>
+      <select id="origin" onchange="calculateBudget()">
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Hyderabad">Hyderabad</option>
+      </select>
+    </div>
+    <div class="input-box">
+      <label>Number of Travellers</label>
+      <input id="persons" type="number" min="0" step="1" value="2" oninput="calculateBudget()">
+      <div class="input-warning" id="personsWarning">⚠️ Please enter whole numbers only — decimals are not allowed.</div>
+    </div>
+  </div>
+  <div class="costs">
+    <div class="cost"><span id="travelLabel">Travel (Delhi → Goa)</span><strong id="travelCost">₹0</strong></div>
+    <div class="cost"><span>Stay + Food</span><strong id="stayCost">₹0</strong></div>
+    <div class="cost"><span>Local + Activities</span><strong id="activityCost">₹0</strong></div>
+  </div>
+  <div class="total"><span>Estimated Total</span><strong id="totalCost">₹0</strong></div>
+  <div class="estimate-note"><b>ℹ️ Estimate only</b> — values are curated averages from MakeMyTrip, Booking.com and IRCTC. Live API pricing is on our roadmap.</div>
+</section>
+
+<section class="booking-section">
+  <div class="booking-heading">
+    <h2>Where to Stay & Book</h2>
+    <p>Curated hotels, rentals and tour packages for Goa.</p>
+  </div>
+
+  <h3 class="booking-subhead">🏨 Hotels & Stays</h3>
+  <div class="booking-grid">
+    <a href="https://www.booking.com/region/in/goa.html" target="_blank" rel="noopener" class="booking-card"><div class="booking-name">Booking.com Goa</div><div class="booking-desc">3,500+ hotels, resorts & villas</div><div class="booking-link">Visit →</div></a>
+    <a href="https://www.marriott.com/en-us/hotels/goaji-jw-marriott-goa/overview/" target="_blank" rel="noopener" class="booking-card"><div class="booking-name">JW Marriott Goa</div><div class="booking-desc">5-star luxury in Vagator</div><div class="booking-link">Visit →</div></a>
+    <a href="https://www.tajhotels.com/en-in/taj-exotica-goa/" target="_blank" rel="noopener" class="booking-card"><div class="booking-name">Taj Exotica Resort & Spa</div><div class="booking-desc">Beachfront luxury, Benaulim</div><div class="booking-link">Visit →</div></a>
+    <a href="https://goa-tourism.com/" target="_blank" rel="noopener" class="booking-card"><div class="booking-name">GTDC Hotels (Govt)</div><div class="booking-desc">Government-run hotels & cruises</div><div class="booking-link">Visit →</div></a>
+  </div>
+
+  <h3 class="booking-subhead">🏍️ Bike & Scooter Rentals</h3>
+  <div class="booking-grid">
+    <a href="https://www.rentonow.in/" target="_blank" rel="noopener" class="booking-card"><div class="booking-name">RentoNow</div><div class="booking-desc">Online booking for Goa & North Goa</div><div class="booking-link">Visit →</div></a>
+    <a href="https://gowheelo.com/" target="_blank" rel="noopener" class="booking-card"><div class="booking-name">GoWheelo</div><div class="booking-desc">Scooters from ₹500/day, 50+ cities</div><div class="booking-link">Visit →</div></a>
+    <a href="https://gearzvehicle.com/" target="_blank" rel="noopener" class="booking-card"><div class="booking-name">Gearz Vehicle</div><div class="booking-desc">Activa & bike rentals from ₹399/day</div><div class="booking-link">Visit →</div></a>
+  </div>
+
+  <h3 class="booking-subhead">🚗 Car Rentals</h3>
+  <div class="booking-grid">
+    <a href="https://www.zoomcar.com/" target="_blank" rel="noopener" class="booking-card"><div class="booking-name">Zoomcar</div><div class="booking-desc">Self-drive cars with doorstep delivery</div><div class="booking-link">Visit →</div></a>
+    <a href="https://www.revv.co.in/" target="_blank" rel="noopener" class="booking-card"><div class="booking-name">Revv</div><div class="booking-desc">Self-drive cars & subscription plans</div><div class="booking-link">Visit →</div></a>
+    <a href="https://www.savaari.com/" target="_blank" rel="noopener" class="booking-card"><div class="booking-name">Savaari</div><div class="booking-desc">Chauffeur-driven cabs & outstation trips</div><div class="booking-link">Visit →</div></a>
+  </div>
+
+  <h3 class="booking-subhead">✈️ Tour & Travel Packages</h3>
+  <div class="booking-grid">
+    <a href="https://goa-tourism.com/" target="_blank" rel="noopener" class="booking-card"><div class="booking-name">Goa Tourism (Official)</div><div class="booking-desc">Monsoon special & Cool Coastline packages</div><div class="booking-link">Visit →</div></a>
+    <a href="https://www.yatra.com/" target="_blank" rel="noopener" class="booking-card"><div class="booking-name">Yatra.com</div><div class="booking-desc">Goa holiday packages with sightseeing</div><div class="booking-link">Visit →</div></a>
+    <a href="https://www.thrillophilia.com/" target="_blank" rel="noopener" class="booking-card"><div class="booking-name">Thrillophilia</div><div class="booking-desc">47 Goa tour packages up to 40% off</div><div class="booking-link">Visit →</div></a>
+  </div>
+</section>
+
+</main>
+
+<!-- Reviews section for Goa itself -->
+<section class="reviews-section" id="reviewsSection">
+  <div class="reviews-heading">
+    <h2>Reviews for Goa</h2>
+    <p>Share your experience with other travellers.</p>
+  </div>
+
+  <div class="review-write" id="reviewWriteForm" style="display:none;">
+    <span class="write-label">Write a review</span>
+    <div class="star-selector" id="starSelector">
+      <span class="star" data-star="1">★</span>
+      <span class="star" data-star="2">★</span>
+      <span class="star" data-star="3">★</span>
+      <span class="star" data-star="4">★</span>
+      <span class="star" data-star="5">★</span>
+    </div>
+    <textarea id="reviewText" placeholder="Share your experience..."></textarea>
+    <button class="post-btn" onclick="submitReview()">Post Review</button>
+  </div>
+
+  <div class="login-prompt" id="loginPromptBox" style="display:none;">
+    Please <a href="auth.html">login</a> to write a review, like, or reply.
+  </div>
+
+  <div class="review-list" id="reviewList"></div>
+</section>
+
+<footer>
+  <div class="footer-logo">Yatra<span>X</span></div>
+  Explore more. Travel better.
+</footer>
+
+<script src="common.js"></script>
+<script src="reviews.js"></script>
+<script src="goa.js"></script>
+</body>
+</html>
