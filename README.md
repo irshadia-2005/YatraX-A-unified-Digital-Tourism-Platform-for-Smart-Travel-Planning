@@ -4,7 +4,7 @@
 
 Built with **vanilla HTML, CSS, and JavaScript** — no frameworks, no build step. Consumes the YatraX Spring Boot REST API for live destination data.
 
-**Backend repo:** [github.com/mdatyabnadim-sys/YatraX-backend](https://github.com/mdatyabnadim-sys/YatraX-backend)
+**Backend repo:** [github.com/mdatyabnadim-sys/YatraX-backend]([https://github.com/mdatyabnadim-sys/YatraX-backend](https://github.com/irshadia-2005/YatraX-backend))
 
 **Live demo:** [yatrax-eight.vercel.app](https://yatrax-eight.vercel.app)
 
